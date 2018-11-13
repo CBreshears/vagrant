@@ -111,7 +111,7 @@ if [ ! -f /usr/lib/libgtest.a ]; then
   wget https://github.com/google/googletest/archive/release-1.7.0.tar.gz
   tar xf release-1.7.0.tar.gz
   cd googletest-release-1.7.0
-  cmake . && make
+  cmake -DBUILD_SHARED_LIBS=ON . && make
   sudo mv include/gtest /usr/include/gtest
   sudo mv libgtest_main.a libgtest.a /usr/lib/
   cd ..
